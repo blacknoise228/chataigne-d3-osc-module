@@ -1,0 +1,74 @@
+{
+  "name":"Disguise D3 OSC",
+  "type":"OSC",
+  "path":"Software",
+  
+  "version":"0.1.0",
+  "description":"Disguise D3 OSC custom module",
+  "url":"https://github.com/blacknoise228/chataigne-d3-osc-module",
+	"downloadURL":"https://github.com/blacknoise228/chataigne-d3-osc-module/archive/master.zip",
+
+  "hasInput":false, 
+  "hasOutput":true, 
+
+  "hideDefaultCommands":false,
+  
+  "defaults":
+  {	
+    "autoAdd":false,
+    "OSC Output":
+    {
+      "localPort":7401
+    }
+  },
+
+  "hideDefaultParameters": [ "autoAdd"],
+
+  "scripts": 
+  [
+    "d3_osc.js"
+  ],
+
+  "commands":
+  {
+    
+    "Timeline":
+    {
+      "menu":"",  
+      "callback":"sendTimelineCommand",
+      "parameters":
+      {
+        "Action":
+        {
+          "type":"Enum",
+          "options":
+					{
+						"Play":"play",
+						"Play to end of section":"playsection",
+            "Loop section": "loop",
+            "Stop": "stop",
+            "Previous section": "previoussection",
+            "Next section":"nextsection",
+            "Return to start":"returntostart",
+            "Previous track":"previoustrack",
+            "Next track":"nexttrack"
+					}
+        }
+      }
+    },
+    "Cue":
+    {
+      "menu":"",  
+      "callback":"sendCueCommand",
+      "parameters":
+      {
+        "Cue number":
+        {
+          "type":"Integer",
+          "min": 0,
+          "default": 0
+        }
+      }
+    }
+  }
+}
