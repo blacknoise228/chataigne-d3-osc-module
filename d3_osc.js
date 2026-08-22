@@ -1,4 +1,4 @@
-function sendTimelineCommand(command)
+function sendCommand(command)
 {
 	local.send("/d3/showcontrol/"+ command);
 }

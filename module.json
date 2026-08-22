@@ -43,10 +43,10 @@
     "Timeline":
     {
       "menu":"",  
-      "callback":"sendTimelineCommand",
+      "callback":"sendCommand",
       "parameters":
       {
-        "Action":
+        "Timeline":
         {
           "type":"Enum",
           "options":
@@ -75,6 +75,23 @@
           "type":"Integer",
           "min": 0,
           "default": 0
+        }
+      }
+    },
+    "Fade":
+    {
+      "menu":"",  
+      "callback":"sendCommand",
+      "parameters":
+      {
+        "Fade":
+        {
+          "type":"Enum",
+          "options":
+					{
+						"Fade Up":"fadeup",
+            "Fade Down":"fadedown"
+					}
         }
       }
     }
