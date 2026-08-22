@@ -5,5 +5,5 @@ function sendCommand(command)
 
 function sendCueCommand(value)
 {
-	local.send("/d3/showcontrol/cue"+" ", value);
+	local.send("/d3/showcontrol/cue "+value);
 }
