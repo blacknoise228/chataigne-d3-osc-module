@@ -15,7 +15,7 @@
   
   "defaults":
   {	
-    "autoAdd":false,
+    "autoAdd":true,
     "OSC Input":
 		{
 			"localPort":7402
@@ -29,8 +29,6 @@
 			}
 		}
   },
-
-  "hideDefaultParameters": [ "autoAdd"],
 
   "scripts": 
   [
