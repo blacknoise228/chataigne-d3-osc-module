@@ -8,7 +8,7 @@
   "url":"https://github.com/blacknoise228/chataigne-d3-osc-module",
 	"downloadURL":"https://github.com/blacknoise228/chataigne-d3-osc-module/archive/master.zip",
 
-  "hasInput":false, 
+  "hasInput":true,
   "hasOutput":true, 
 
   "hideDefaultCommands":false,
@@ -16,10 +16,18 @@
   "defaults":
   {	
     "autoAdd":false,
-    "OSC Output":
-    {
-      "localPort":7401
-    }
+    "OSC Input":
+		{
+			"localPort":7402
+		},
+		"OSC Outputs": {
+			"OSC Output": {
+				"local": true,
+				"remoteHost": "192.168.1.1",
+				"remotePort": 7401,
+        "listenToFeedback": true
+			}
+		}
   },
 
   "hideDefaultParameters": [ "autoAdd"],
